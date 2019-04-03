@@ -6,4 +6,11 @@ class BillingService(
     private val paymentProvider: PaymentProvider
 ) {
    // TODO - Add code e.g. here
+    for(invoice in invoiceService.fetchAll()){
+      if(invoice.status== InvoiceStatus.PENDING){//check that invoice is not alrady paid
+         if(paymentProvider.charge(invoice)){//get paid if posible
+             //update invoice
+         }
+      } 
+    }
 }
