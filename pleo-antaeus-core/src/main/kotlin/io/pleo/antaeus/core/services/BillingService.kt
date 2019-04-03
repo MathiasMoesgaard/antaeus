@@ -11,6 +11,9 @@ class BillingService(
          if(paymentProvider.charge(invoice)){//get paid if posible
              //update invoice
          }
+         else{
+             //handle customers unable to pay
+         }
       } 
     }
 }
