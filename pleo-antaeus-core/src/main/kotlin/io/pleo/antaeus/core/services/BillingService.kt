@@ -13,6 +13,9 @@ class BillingService(
          }
          else{
              //handle customers unable to pay
+             println(
+                 "Customer" + invoice.customerId + "could not pay invoice" + invoice.id
+             )
          }
       } 
     }
